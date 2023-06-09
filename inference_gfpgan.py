@@ -7,15 +7,6 @@ import torch
 from basicsr.utils import imwrite
 from gfpgan import GFPGANer
 
-def inference(input, output, version, upscale, bg_tile):
-    args = parse_args()
-    args.input = input
-    args.output = output
-    args.version = version
-    args.upscale = upscale
-    args.bg_tile = bg_tile
-    main(args)
-
 def main(args):
     # ------------------------ input & output ------------------------
     if args.input.endswith('/'):
